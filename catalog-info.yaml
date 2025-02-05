@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "spring"
+  annotations:
+    github.com/project-slug: redhat-developer-hub-kaito-ii-dev-apps/spring
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: spring
+    backstage.io/kubernetes-id: spring
+    backstage.io/kubernetes-namespace: spring
+
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:redhat-developer-hub-kaito-ii-dev-apps/teama"

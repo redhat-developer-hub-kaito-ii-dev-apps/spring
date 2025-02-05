@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spring
+  namespace: spring
+spec:
+  destination:
+    namespace: spring
+    server: https://kubernetes.default.svc
+  project: spring
+  source:
+    kustomize:
+      namespace: spring
+    path: kustomize/
+    repoURL: [object Object]
+    targetRevision: HEAD
