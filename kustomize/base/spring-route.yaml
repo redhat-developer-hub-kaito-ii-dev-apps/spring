@@ -5,14 +5,13 @@ metadata:
     app: spring
   name: spring
 spec:
-  spec:
-    port:
-      targetPort: 8080-tcp
-    subdomain: spring
-    tls:
-      insecureEdgeTerminationPolicy: Redirect
-      termination: edge
-    to:
-      kind: Service
-      name: spring
-      weight: 100
+  port:
+    targetPort: 8080-tcp
+  subdomain: spring
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: spring
+    weight: 100
