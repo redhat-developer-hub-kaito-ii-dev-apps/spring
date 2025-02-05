@@ -11,6 +11,6 @@ spec:
   source:
     kustomize:
       namespace: spring
-    path: kustomize/
+    path: kustomize/overlays/dev
     repoURL: https://github.com/redhat-developer-hub-kaito-ii-dev-apps/spring
     targetRevision: HEAD
