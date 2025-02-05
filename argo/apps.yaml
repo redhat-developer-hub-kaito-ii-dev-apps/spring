@@ -12,5 +12,5 @@ spec:
     kustomize:
       namespace: spring
     path: kustomize/
-    repoURL: [object Object]
+    repoURL: https://github.com/redhat-developer-hub-kaito-ii-dev-apps/spring
     targetRevision: HEAD
