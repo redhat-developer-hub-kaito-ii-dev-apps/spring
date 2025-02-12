@@ -1,7 +1,7 @@
 name: Publish package to GitHub Packages
 on:
   release:
-    types: [created]
+    types: [published]
 
 env:
   REGISTRY: ghcr.io
@@ -14,6 +14,9 @@ jobs:
       contents: read
       packages: write
     steps:
+      - run: echo ${{env.RELEASE_NAME}}
+        env:
+          RELEASE_NAME: ${{ github.event.release.name }}
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
